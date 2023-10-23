@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch
+
+jobs:
+  use-reusable:
+    uses: ./.github/workflows/reusable.yml
+
+  status-check:
+    needs:
+      - use-reusable
+    uses: rapidsai/shared-workflows/.github/workflows/pr-builder.yaml@branch-23.12
