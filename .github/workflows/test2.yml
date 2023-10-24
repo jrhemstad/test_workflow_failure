@@ -3,8 +3,9 @@ on:
   pull_request:
 
 jobs:
-  #use-reusable:
-  #  uses: ./.github/workflows/reusable.yml
+  use-reusable:
+    uses: ./.github/workflows/reusable.yml
 
   status-check:
+    needs: use-reusable
     uses: rapidsai/shared-workflows/.github/workflows/pr-builder.yaml@branch-23.12
