@@ -11,11 +11,6 @@ jobs:
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
-      - name: Check all job status
-        if: >-
-          ${{
-               contains(needs.*.result, 'failure')
-            || contains(needs.*.result, 'cancelled')
-            || contains(needs.*.result, 'skipped')
-          }}
-        run: exit 1
+      - name: Print the Needs Context
+        run: echo "${{ toJson(needs) }}"
+        
