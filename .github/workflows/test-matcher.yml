@@ -10,6 +10,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Add problem matcher
         run: |
-          echo "::add-matcher::${{ github.workspace }}/.github/problem-matchers/problem-matcher.json"
+          echo "::add-matcher::.github/problem-matchers/problem-matcher.json"
       - run: |
           echo "error: test error"
