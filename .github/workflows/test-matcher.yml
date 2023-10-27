@@ -15,4 +15,4 @@ jobs:
         run: |
           echo "::add-matcher::.github/workflows/problem-matcher.json"
       - run: |
-          echo "error: test error"
+          echo "README.md:0 error: test error"
