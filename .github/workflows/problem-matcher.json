@@ -1,0 +1,13 @@
+
+  "problemMatcher": [
+    {
+      "owner": "simple-error",
+      "pattern": [
+        {
+          "regexp": "^error:\\s+(.*)$",
+          "message": 1
+        }
+      ]
+    }
+  ]
+}
