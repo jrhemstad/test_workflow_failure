@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Add problem matcher
+        run: |
+          echo "::add-matcher::${{ github.workspace }}/.github/problem-matchers/problem-matcher.json"
+      - run: |
+          echo "error: test error"
