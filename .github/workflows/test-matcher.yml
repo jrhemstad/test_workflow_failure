@@ -13,6 +13,6 @@ jobs:
           ls -l
       - name: Add problem matcher
         run: |
-          echo "::add-matcher::.github/problem-matcher.json"
+          echo "::add-matcher::.github/workflows/problem-matcher.json"
       - run: |
           echo "error: test error"
