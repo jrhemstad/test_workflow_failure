@@ -4,8 +4,11 @@
       "owner": "simple-error",
       "pattern": [
         {
-          "regexp": "^error:\\s+(.*)$",
-          "message": 1
+          "regexp": "^(.*):(\\d+)\\serror:\\s(.*)$",
+          "file": 1,
+          "line": 2,
+          "message": 3,
+          "severity": "error"
         }
       ]
     }
